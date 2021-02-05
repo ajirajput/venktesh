@@ -1,0 +1,195 @@
+{% extends 'website/base.html' %} {% load widget_tweaks %} {% load static %} {% block styleArea %}{% endblock %}
+<style></style>
+{% block contentArea%}
+
+<!-- page-title -->
+<div class="ttm-page-title-row">
+    <div class="ttm-page-title-row-inner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="page-title-heading">
+                        <h2 class="title">Contact Us</h2>
+                    </div>
+                    <div class="breadcrumb-wrapper">
+                        <span>
+                            <a title="Homepage" href="{% url 'website:index' %}">Home</a>
+                        </span>
+                        <span>Contact Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- page-title end-->
+
+
+<!--site-main start-->
+<div class="site-main">
+    <section class="ttm-row pt-0 pb-50 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- testimonial-box -->
+                    <div class="pt-45 res-991-pt-0 res-991-pb-30">
+                        <div class="mb-30">
+                            <h4>Our Office Inforamtion</h4>
+                        </div>
+                        <!--featured-icon-box-->
+                        <div class="featured-icon-box icon-align-before-content icon-ver_align-top">
+                            <div class="featured-icon">
+                                <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                    <i class="flaticon-placeholder"></i>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5>Location</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>B-24, Green Park, Dibdiba, Kaushalganj, Rampur (U.P).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-icon-box end-->
+                        <div class="sep_holder_box width-100 mt-20 mb-20">
+                            <span class="sep_holder"><span class="sep_line"></span></span>
+                        </div>
+                        <!--featured-icon-box-->
+                        <div class="featured-icon-box icon-align-before-content icon-ver_align-top">
+                            <div class="featured-icon">
+                                <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                    <i class="flaticon-call"></i>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5>Call Us</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>+91 (750)-002-8666</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-icon-box end-->
+                        <div class="sep_holder_box width-100 mt-20 mb-20">
+                            <span class="sep_holder"><span class="sep_line"></span></span>
+                        </div>
+                        <!--featured-icon-box-->
+                        <div class="featured-icon-box icon-align-before-content icon-ver_align-top">
+                            <div class="featured-icon">
+                                <div class="ttm-icon ttm-icon_element-onlytxt ttm-icon_element-color-skincolor ttm-icon_element-size-md">
+                                    <i class="flaticon-email"></i>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title">
+                                    <h5>Email</h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <a href="mailto:info@venkteshdiagnostic.in">info@venkteshdiagnostic.com</a><br>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- featured-icon-box end-->
+                        <ul class="social-icons circle social-hover mt-20">
+                            <li class="social-facebook"><a class="tooltip-top" target="_blank" href="https://www.facebook.com/venkteshdiagnosticscenter" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ttm-col-bgcolor-yes ttm-bg ttm-bgcolor-white z-index-2 spacing-5 box-shadow">
+                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                        <!-- section title -->
+                        <div class="section-title with-desc clearfix">
+                            <div class="title-header">
+                                <h5>GET IN TOUCH</h5>
+                                <h2 class="title">Don’t hesitate, contact us for better help and services</h2>
+                            </div>
+                        </div>
+                        <!-- section title end -->
+                        <form action="{% url 'website:contact' %}" method="POST">
+                            <div class="ttm-contactform-2 wrap-form clearfix">
+                                {% csrf_token %}
+                                <div class="row">
+
+                                    <div class="col-lg-6">
+                                        <label>
+                                            <span class="text-input">
+                                                {% render_field form.name placeholder=form.name.label %}
+                                                {{ form.name.errors }}
+                                                
+                                                
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>
+                                            <span class="text-input">
+                                                {% render_field form.email placeholder=form.email.label %}</span>
+                                                {{ form.email.errors }}
+                                            
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label>
+                                            <span class="text-input">
+                                                {% render_field form.mobile_no placeholder=form.mobile_no.label %}</span>
+                                                {{ form.mobile_no.errors }}
+                                            
+                                            
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label>
+                                            <span class="text-input">
+                                                {% render_field form.subject placeholder=form.subject.label %}</span>
+                                                {{ form.subject.errors }}
+                                        </label>
+                                    </div>
+                                </div>
+                                <label>
+                                    <span class="text-input">
+                                        {% render_field form.message rows=3 placeholder=form.message.label %}
+                                        {{ form.message.errors }}
+                                        </span>
+                                </label>
+                                <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+        </div>
+    </section>
+
+
+    <!--google_map-->
+    <div id="google_map" class="google_map">
+        <div class="map_container">
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223146.69868289315!2d79.3006063955845!3d29.08597869952241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390a801965ca9867%3A0xc607746afd90a26c!2sGreen%20Park!5e0!3m2!1sen!2sin!4v1593242987472!5m2!1sen!2sin"
+                    style="width: 100%; height:400px" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--site-main end-->
+
+
+
+
+{% endblock %} {% block scriptArea %}
+<script>
+    $(function() {
+        '{% if success %}'
+        alert('{{success}}')
+        '{% endif %}'
+    })
+</script> {% endblock %}

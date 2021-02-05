@@ -1,0 +1,288 @@
+{% extends 'website/base.html' %}{% load static %} {% block styleArea %}{% endblock %}
+<style></style>
+{% block contentArea %}
+
+
+<!-- page-title -->
+<div class="ttm-page-title-row">
+    <div class="ttm-page-title-row-inner">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="page-title-heading">
+                        <h2 class="title">Services</h2>
+                    </div>
+                    <div class="breadcrumb-wrapper">
+                        <span>
+                                <a title="Homepage" href="#">Home</a>
+                            </span>
+                        <span>Services</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- page-title end-->
+
+
+<!--site-main start-->
+<div class="site-main">
+
+    <!--grid-section-->
+    <section class="ttm-row grid-section clearfix">
+        <div class="container">
+            <!-- row -->
+            <div class="row multi-columns-row ttm-boxes-spacing-15px">
+                {% for dt in MainServices %}
+                <div class="ttm-box-col-wrapper col-lg-4 col-md-4 col-sm-6">
+                    <!-- featured-imagebox -->
+                    <div class="featured-imagebox featured-imagebox-services">
+                        <!-- featured-thumbnail -->
+                        <div class="featured-thumbnail">
+                            <a href="#">
+                                <img class="img-fluid lazy" data-src="/{{dt.thumbnail_image.url}}" alt="image"></a>
+                        </div>
+                        <!-- featured-thumbnail end-->
+                        <div class="featured-content">
+                            <div class="fea_con_left">
+                                <div class="ttm-icon ttm-icon_element-border ttm-icon_element-color-grey ttm-icon_element-size-xs ttm-icon_element-style-round">
+                                    <i class="{{dt.icon}}"></i>
+                                </div>
+                            </div>
+                            <div class="fea_con_right">
+                                <div class="featured-title">
+                                    <h5><a href="#">{{dt.name}}</a></h5>
+                                </div>
+                                <div class="featured-desc">
+                                    <p>{{dt.short_content|slice:120}}..
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured-imagebox -->
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!--services-section end-->
+    <!--cta-section-->
+    <section class="ttm-row cta-section ttm-bgcolor-skincolor bg-img8 ttm-bg ttm-bgimage-yes clearfix lazy" data-bg="/static/images/bg-image/s10.png">
+        <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <!--container-->
+            <div class="row">
+                <!--row-->
+                <div class="col-lg-8 m-auto">
+                    <div class="mt-15 row-title res-991-mt-0 text-center ttm-textcolor-white">
+                        <div class="ttm-play-icon-btn mb-35">
+                            <div class="ttm-play-icon-animation">
+                                <a href="https://youtu.be/7e90gBu4pas" target="_self" class="ttm_prettyphoto">
+                                    <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-white ttm-icon_element-size-sm ttm-icon_element-style-rounded">
+                                        <i class="fa fa-play"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- section title -->
+                        <div class="section-title clearfix">
+                            <div class="title-header">
+                                <h2 class="title">We Ensure Safe Diagnoses And Effective Therapies</h2>
+                                <h5>We Employ The Latest Technology</h5>
+                            </div>
+                        </div>
+                        <!-- section title end -->
+                        <div class="pt-20 pb-80 res-991-pb-0 res-991-pt-10">
+                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-btn-color-white" href="#">Get An Appointment</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--cta-section-->
+
+
+    <!--fid-section-->
+    <div class="ttm-row fid-section mt_80 res-991-mt-0 z-index-1 clearfix">
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-white box-shadow">
+                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
+                        <div class="layer-content">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <!-- ttm-fid -->
+                                    <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                        <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                            <i class="ti ti-cup"></i>
+                                        </div>
+                                        <div class="ttm-fid-contents">
+                                            <h4 class="ttm-fid-inner">
+                                                <span data-appear-animation="animateDigits" data-from="0" data-to="143" data-interval="15" data-before="" data-before-style="sup" data-after="" data-after-style="sub" class="numinate">0</span>
+                                                <sub>+</sub>
+                                            </h4>
+                                            <h3 class="ttm-fid-title">Awards Winning</h3>
+                                        </div>
+                                    </div>
+                                    <!-- ttm-fid end -->
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <!-- ttm-fid -->
+                                    <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                        <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                            <i class="flaticon-healthcare-and-medical-1"></i>
+                                        </div>
+                                        <div class="ttm-fid-contents">
+                                            <h4 class="ttm-fid-inner">
+                                                <span data-appear-animation="animateDigits" data-from="0" data-to="780" data-interval="15" data-before="" data-before-style="sup" data-after="" data-after-style="sub" class="numinate">0</span>
+                                                <sub>+</sub>
+                                            </h4>
+                                            <h3 class="ttm-fid-title">Our Equipments</h3>
+                                        </div>
+                                    </div>
+                                    <!-- ttm-fid end -->
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <!-- ttm-fid -->
+                                    <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                        <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                            <i class="flaticon-magnifier"></i>
+                                        </div>
+                                        <div class="ttm-fid-contents">
+                                            <h4 class="ttm-fid-inner">
+                                                <span data-appear-animation="animateDigits" data-from="0" data-to="675" data-interval="15" data-before="" data-before-style="sup" data-after="" data-after-style="sub" class="numinate">0</span>
+                                                <sub>+</sub>
+                                            </h4>
+                                            <h3 class="ttm-fid-title">Complete Cases</h3>
+                                        </div>
+                                    </div>
+                                    <!-- ttm-fid end -->
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <!-- ttm-fid -->
+                                    <div class="ttm-fid inside ttm-fid-with-icon ttm-fid-view-lefticon style2">
+                                        <div class="ttm-fid-icon-wrapper ttm-textcolor-skincolor">
+                                            <i class="flaticon-support"></i>
+                                        </div>
+                                        <div class="ttm-fid-contents">
+                                            <h4 class="ttm-fid-inner">
+                                                <span data-appear-animation="animateDigits" data-from="0" data-to="457" data-interval="15" data-before="" data-before-style="sup" data-after="" data-after-style="sub" class="numinate">0</span>
+                                                <sub>+</sub>
+                                            </h4>
+                                            <h3 class="ttm-fid-title">Industry Expertise</h3>
+                                        </div>
+                                    </div>
+                                    <!-- ttm-fid end -->
+                                </div>
+                            </div>
+                            <!-- row end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fid-section end-->
+
+    <!--procedure-section-->
+    <section class="ttm-row procedure-section ttm-bgcolor-grey bg-img9 ttm-bg ttm-bgimage-yes z-index_1 mt_100 res-991-mt-0 clearfix">
+        <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-6 col-md-8 col-sm-9 m-auto">
+                    <!-- section-title -->
+                    <div class="section-title with-sep title-style-center_text">
+                        <div class="title-header">
+                            <h5>Way We Work</h5>
+                            <h2 class="title">Why Venktesh Diagnostics?</h2>
+                        </div>
+                        <div class="title-desc">At Venkatesh Diagnostic Center, we intend to provide a variety of Diagnostic and Imaging Tests strengthened by precise reports and advanced machinery for an accurate evaluation of the type and magnitude of disease.</div>
+                    </div>
+                    <!-- section-title end -->
+                </div>
+            </div>
+            <!-- row end -->
+            <div class="row">
+                <!-- row -->
+                <div class="col-md-4">
+                    <!-- featured-imagebox -->
+                    <div class="featured-icon-box icon-align-top-content text-center style4">
+                        <div class="featured-icon">
+                            <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-style-rounded">
+                                <i class="flaticon-lab-2"></i>
+                                <span class="fea-number">01</span>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-title">
+                                <h5>Modern Equipment</h5>
+                            </div>
+                            <div class="featured-desc">
+                                <p>We provide the best results through the assistance of modern machinery Samsung HS70A 4D/5D advanced solution- A pioneer in the field of ultrasonography.</p>
+                            </div>
+                        </div>
+                        <div class="arrow">
+                            <img src="images/arrow-1.png" alt="">
+                        </div>
+                    </div>
+                    <!-- featured-imagebox end-->
+                </div>
+                <div class="col-md-4">
+                    <!-- featured-imagebox -->
+                    <div class="featured-icon-box icon-align-top-content text-center style4">
+                        <div class="featured-icon">
+                            <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-style-rounded">
+                                <i class="flaticon-healthcare-and-medical-1"></i>
+                                <span class="fea-number">02</span>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-title">
+                                <h5>Individual Approach</h5>
+                            </div>
+                            <div class="featured-desc">
+                                <p>With years of experience in Medical reporting and diagnostic imaging, we provide you with the best services and facilities to cater to your healthcare needs.</p>
+                            </div>
+                        </div>
+                        <div class="arrow flip-arrow">
+                            <img src="images/arrow-2.png" alt="">
+                        </div>
+                    </div>
+                    <!-- featured-imagebox end-->
+                </div>
+                <div class="col-md-4">
+                    <!-- featured-imagebox -->
+                    <div class="featured-icon-box icon-align-top-content text-center style4">
+                        <div class="featured-icon">
+                            <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-white ttm-icon_element-size-md ttm-icon_element-style-rounded">
+                                <i class="flaticon-laboratory-3"></i>
+                                <span class="fea-number">03</span>
+                            </div>
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-title">
+                                <h5>Need results urgently?</h5>
+                            </div>
+                            <div class="featured-desc">
+                                <p>At Our Center, our patients are our first priority, so to provide a wholesome experience we've introduced the facility of urgent reporting as and when needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- featured-imagebox end-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--procedure-section end-->
+
+</div>
+<!--site-main end-->
+
+
+{% endblock %} {% block scriptArea %} {% endblock %}

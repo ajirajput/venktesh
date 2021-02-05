@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
+    <div>
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                        <h1 style="text-align: center; font-family: Century; font-size: 31px; font-weight: 900; margin: 0;">Venktesh Diagnostic Center</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style=" padding-bottom: 2px;">
+                        <h1 style="text-align: center; font-family: Century; font-size: 14px; font-weight: 900; margin: 0;">B-24, Green Park, Dibdiba, Kaushalganj, Rampur (U.P)</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="98%" cellspacing="0" cellpadding="0" border="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td width="90%" valign="top" align="left">
+                                        <table width="98%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                            <tbody>
+                                                <tr height="30">
+                                                    <td colspan="4" valign="middle" align="center">
+                                                        <h2 style="color:#333333;font-size:18px;">Patient Details</h2>
+                                                    </td>
+                                                </tr>
+                                                {% for dt in data %}
+                                                <tr height="25">
+                                                    <td width="25%" valign="middle" align="left"><strong>Receipt No : </strong></td>
+                                                    <td width="25%" valign="middle" align="left"><span id="objReceiptNo">VLAB03822</span></td>
+                                                    <td width="25%" valign="middle" align="left"><strong>Date : </strong></td>
+                                                    <td width="25%" valign="middle" align="left"><span id="objDate">4-Feb-2021 03:25 PM</span></td>
+                                                </tr>
+                                                <tr height="25">
+                                                    <td width="25%" valign="middle" align="left"><strong>Patient Name : </strong></td>
+                                                    <td width="25%" valign="middle" align="left"><span id="objPatietName"> {{dt.name}} L</span></td>
+                                                    <td width="25%" valign="middle" align="left"><strong>UHID No : </strong><span id="objUhidNo"> {{dt.registration.uhid_no}} </span></td>
+                                                    <td width="25%" valign="middle" align="left"><strong>Lab No : </strong> <span id="objLabNo">NA</span></td>
+
+                                                </tr>
+                                                <tr height="25">
+
+                                                    <td width="25%" valign="middle" align="left"><strong>Reference From : </strong></td>
+                                                    <td width="25%" valign="middle" align="left"><span id="objReferenceName">Dr. B. Ansari</span></td>
+                                                    <td width="25%" valign="middle" align="left"><strong>Age/Sex : </strong></td>
+                                                    <td width="25%" valign="middle" align="left"><span id="objAge">{{dt.registration.age}}/{{dt.registration.gender}}</span></td>
+
+                                                </tr>
+                                                <tr height="25">
+                                                    <td valign="middle" align="left"><strong>Net Amount : </strong></td>
+                                                    <td valign="middle" align="left"><span id="objAmount"> {{dt.investigation.amount}} </span></td>
+                                                    <td valign="middle" align="left">&nbsp;</td>
+
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-bottom:2px solid #000;"></td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <table width="98%" cellspacing="0" cellpadding="0" border="0" align="center">
+                            <tbody>
+                                <tr height="30">
+                                    <td style="border-bottom:1px solid #CCCCCC;" width="40%" colspan="2" valign="top" align="left"><strong>Test Name </strong></td>
+                                    <td style="border-bottom:1px solid #CCCCCC;" width="40%" valign="top" align="right"><strong>Amount</strong></td>
+                                </tr>
+                            </tbody>
+                            <tbody id="objData">
+
+                                <tr height="30">
+                                    <td style="border-bottom:1px solid #CCCCCC;" width="40%" colspan="2" valign="top" align="left"><strong>USG- ANC</strong></td>
+                                    <td style="border-bottom:1px solid #CCCCCC;" width="40%" valign="top" align="right"><strong>900.00</strong></td>
+                                </tr>
+                                <tr height="30">
+                                    <td style="border-bottom:1px solid #CCCCCC;" width="40%" colspan="2" valign="top" align="left"><strong>U.S.G Whole Abdomen</strong></td>
+                                    <td style="border-bottom:1px solid #CCCCCC;" width="40%" valign="top" align="right"><strong>800.00</strong></td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr height="30">
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="top" align="right">&nbsp;</td>
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="top" align="right"><strong>Gross Total </strong></td>
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="top" align="right"><strong id="objGross">1700.00</strong></td>
+                                </tr>
+                                <tr height="30">
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="top" align="right">&nbsp;</td>
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="top" align="right"><strong>Discount</strong></td>
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="top" align="right"><strong id="objDiscount">400.00</strong></td>
+                                </tr>
+                                <tr height="30">
+                                    <td width="40%" valign="top" align="right"><strong>Payment Mode </strong>: Cash</td>
+                                    <td width="40%" valign="top" align="right"><strong>Net Total </strong></td>
+                                    <td width="40%" valign="top" align="right"><strong id="objTotal">1300.00</strong></td>
+                                </tr>
+                                <tr height="30">
+                                    <td style="border-bottom:2px solid #000;" width="40%" valign="middle" align="left"><strong>Prepared By: <span id="objPrepared"></span> </strong></td>
+                                    <td colspan="2" style="border-bottom:2px solid #000;" width="40%" valign="middle" align="right"><strong>Authorized Signatory </strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
